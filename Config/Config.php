@@ -1,0 +1,4 @@
+<?php
+    const base_url = "http://localhost/BANKUP!-PROYECTO/";
+    
+?>
