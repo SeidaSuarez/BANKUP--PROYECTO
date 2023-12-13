@@ -19,9 +19,9 @@
             $parametro = trim($parametro, ",");
         }
     }
-    $dirController = "Controllers/".$controller.".php";
-    if (file_exists($controller)) {
-        require_once $controller;
+    $dirControllers = "Controllers/".$controller.".php";
+    if (file_exists($dirControllers)) {
+        require_once $dirControllers;
         $controller = new $controller();
         if(method_exists($controller, $metodo)) {
             $controller->$metodo($parametro);
