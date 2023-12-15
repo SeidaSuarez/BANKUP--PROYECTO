@@ -29,6 +29,9 @@
                                                 <label class="small mb-1" for="pass">Contraseña</label>
                                                 <input class="form-control py-4" id="pass" name="pass" type="password" placeholder="Introduzca contraseña" />
                                             </div>
+                                            <div class="alert alert-danger text-center d-none" id="alerta" roler="alert">
+
+                                            </div>
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <button class="btn btn-primary" type="submit" onclick="frmLogin(event);">Login</button>
                                             </div>

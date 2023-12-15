@@ -1,14 +1,23 @@
 <?php
     class Usuarios extends Controller{
+
         public function __construct()
         {
             session_start();
             parent::__construct();
         }
+
         public function index()
         {
 
             $this->views->getView($this, "index");
+        }
+
+        public function listar()
+        {
+            $data = $this->model->getUsuarios();
+            echo json_encode($data, JSON_UNESCAPED_UNICODE);
+            die();
         }
 
         public function validar()
@@ -21,7 +30,6 @@
                 $data = $this->model->getUsuario($usuario, $pass);
                 if ($data) {
                     $_SESSION['id_usuario'] = $data['ID'];
-                    $_SESSION['Rol'] = $data['Rol'];
                     $_SESSION['email'] = $data['email'];
                     $_SESSION['nombre'] = $data['nombre'];
                     $msg = "ok";
