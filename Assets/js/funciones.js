@@ -2,6 +2,43 @@
 
 let tblUsuarios;
 
+document.addEventListener("DOMContentLoaded", function(){
+    tblUsuarios = $('#tblUsuarios').DataTable({
+        ajax: {
+            url: base_url + "Usuarios/listar",
+            dataSrc: ''
+        },
+        columns: [
+            {
+            'data' : 'ID'
+            },{
+            'data' : 'pass'
+            },
+            {
+            'data' : 'DNI'
+            },
+            {
+            'data' : 'nombre'
+            },
+            {
+            'data' : 'apellido_uno'
+            },
+            {
+            'data' : 'apellido_dos'
+            },
+            {
+            'data' : 'fech_naci'
+            }
+            ,{
+            'data' : 'email'
+            }
+            ,{
+            'data' : 'ROL'
+            }
+    ]
+    });
+})
+
 function frmLogin(e) {
     e.preventDefault();
     const usuario = document.getElementById("usuario");
