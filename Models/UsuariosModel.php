@@ -14,7 +14,7 @@
 
         public function getUsuarios()
         {
-            $sql = "SELECT * FROM usuario";
+            $sql = "SELECT * FROM usuario WHERE ROL='Cliente'";
             $data = $this->selectAll($sql);
             return $data;
         }
