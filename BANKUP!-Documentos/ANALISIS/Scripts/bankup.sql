@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS bankup;
-
 CREATE DATABASE bankup;
 
 USE bankup;
@@ -79,8 +77,6 @@ CREATE TABLE Chat (
     FOREIGN KEY (ID_usuario2)
         REFERENCES Usuario (ID)
 ); 
-
-
 
 
 
